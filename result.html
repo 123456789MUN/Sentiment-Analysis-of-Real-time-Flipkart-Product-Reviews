@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews for Filipcard</title>
+</head>
+<body>
+    <h1>Reviews for Filipcard</h1>
+    {% if reviews %}
+        <div id="reviews">
+            {% for review in reviews %}
+                <div class="review">
+                    <p>Name: {{ review['name'] }}</p>
+                    <p>Rating: {{ review['rating'] }}/5</p>
+                    <p>Review: {{ review['review'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No reviews yet.</p>
+    {% endif %}
+</body>
+</html>
